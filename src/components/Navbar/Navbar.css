@@ -1,6 +1,7 @@
 .container {
     display: flex;
     padding: 10px 0px;
+    height: 50px;
     justify-content: space-around;
     align-items: center;
 }
@@ -25,7 +26,7 @@ ul li {
 div.nav-links {
     display: inherit;
     position: relative;
-    right: 15em;
+    right: 14em;
 }
 
 ul li a {
@@ -64,4 +65,13 @@ div.icon-profile-section {
     div.nav-icon {
         display: none;
     }
+}
+
+.cart-icon {
+    display: none;
+}
+
+.cart-icon.active {
+    display: inherit;
+    z-index: 100;
 }
