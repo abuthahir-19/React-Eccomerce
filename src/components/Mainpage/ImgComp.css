@@ -1,0 +1,30 @@
+div.main-img img{
+    height: 80%;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+    left: 4rem;
+}
+
+div.image-list {
+    display: flex;
+    justify-content: center;
+    height: 133px;
+}
+
+div.image-list a img {
+    height: 100px;
+    width: 100px;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+.bg-color {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(231, 222, 222, 0.603);
+    border-radius: 15px;
+    position: relative;
+    top: -120px;
+    left: 16px;
+}

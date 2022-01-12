@@ -1,4 +1,5 @@
 div.main-page-container {
     padding: 10px 25px;
     display: grid;
+    grid-template-columns: 1fr 1fr;
 }

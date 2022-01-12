@@ -14,7 +14,7 @@ div.logo a {
     text-decoration: none;
     color: #000;
 }
-ul {
+ul.list-container {
     display: inherit;
     list-style-type: none;
     padding: 8px 14px;
