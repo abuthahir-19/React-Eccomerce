@@ -1,63 +1,43 @@
-import React, { Component } from 'react';
-import './Navbar.css';
+import React, { Component, Fragment } from 'react';
 import MenuList from './MenuList';
 import CartIcon from './CartIcon';
 import AvatarUI from './AvatarUI';
-import CartCont from './CartCont';
+import CartCont from '../Mainpage/CartCont';
+import './Navbar.css';
 
 class Navbar extends Component {
-    link = "https://www.google.com";
-    state = {clicked : false, cartClicked: false}
-    box = <CartCont />
+    state = {clicked : false}
 
     handleClick = () => {
-        this.setState ({clicked: !this.state.clicked});
+        this.setState ({clicked : !this.state.clicked});
     }
 
-    handleCartClick = () => {
-        this.setState ({cartClicked: !this.state.cartClicked});
-    }
-    
     render () {
         return (
-            <header className='header-container'>
-                <div className="container">
-                    <div className="nav-icon" onClick={this.handleClick}>
-                        <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
-                    <div className="logo">
-                        <a href={this.link}>
-                            <h2>sneakers</h2>
-                        </a>
-                    </div>
-                    <div className="nav-links">
-                        <ul className="list-container">
-                            {MenuList.map((item, index) => {
-                                return (
-                                    <li key={index}>
-                                        <a 
-                                            className={item.cName}
-                                            href={item.url}
-                                        >{item.title}</a>
-                                    </li>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                    <div className="icon-profile-section">
-                        <div
-                            onClick={this.handleCartClick}
-                        >
-                            <CartIcon />
-                        </div>
+            <Fragment>
+                <header class="header-container">
+                    <i id="icon" className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'} onClick={this.handleClick}></i>
+                    <h2>sneakers</h2>
+                    <ul id="links-container" className="links-container">
+                        {MenuList.map ((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <a 
+                                        href={item.url}
+                                        className={item.cName}
+                                    >{item.title}</a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                    <div className="cart-profile-section">
+                        <CartIcon onClick={this.handleClick} />
                         <AvatarUI />
                     </div>
-                </div>
-                <div className={this.state.cartClicked ? 'cart-icon active': 'cart-icon'}>
-                    {this.box}
-                </div>
-            </header>
-        );
+                </header>
+                <CartCont />
+            </Fragment>
+        )
     }
 }
 

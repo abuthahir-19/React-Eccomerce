@@ -1,35 +1,18 @@
 import React, { Component } from 'react';
-import './ImgComp.css';
-import ImageList from './ImageList';
+import './Mainpage.css';
 
 class ImgComp extends Component {
-    miniature = Array.from (ImageList).filter ((value, index) => index % 2 === 0);
-    link = '#';
-    img = 'image';
-
     render () {
         return (
-            <div className="img-container">
-                <div className="main-img">
-                    <img src={ImageList[1]} alt="" />
+            <div id="image-section" className="image-section">
+                <div className="main-image" id="main-image-section">
+                    <img src="images/image-product-1.jpg" alt="m-img"  onclick="displayImageDetails()" />
                 </div>
-                <div className="image-list">
-                    <a href={this.link}>
-                        <img src={ImageList[0]} alt="" />
-                        <div className="bg-color"></div>
-                    </a>
-                    <a href={this.link}>
-                        <img src={ImageList[2]} alt="" />
-                        <div className="bg-color"></div>
-                    </a>
-                    <a href={this.link}>
-                        <img src={ImageList[4]} alt="" />
-                        <div className="bg-color"></div>
-                    </a>
-                    <a href={this.link}>
-                        <img src={ImageList[6]} alt="" />
-                        <div className="bg-color"></div>
-                    </a>
+                <div className="sub-image img-list">
+                    <img src="images/image-product-1-thumbnail.jpg" alt="img" id="1" onclick="renderAsMainImage (1)" />
+                    <img src="images/image-product-2-thumbnail.jpg" alt="img" id="2" onclick="renderAsMainImage (2)" />
+                    <img src="images/image-product-3-thumbnail.jpg" alt="img" id="3" onclick="renderAsMainImage (3)" />
+                    <img src="images/image-product-4-thumbnail.jpg" alt="img" id="4" onclick="renderAsMainImage (4)" />
                 </div>
             </div>
         );

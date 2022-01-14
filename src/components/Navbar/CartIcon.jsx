@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import CartLogo from '../../icons/icon-cart.svg';
-import './CartIcon.css';
+import './Navbar.css';
+
 class CartIcon extends Component {
-    state = {cartClicked: false}
-    
-    render () {
+    render() {
         return (
-            <div className="cart-logo-container">
-                <img
-                    src={CartLogo} alt="Cart-Logo" 
-                    className='img-tag'
-                />
+            <div className="cart-icon">
+                <div className="badge" id="badge_value">
+                    
+                </div>
+                <img id='cart-icon-image' src="icons/icon-cart.svg" alt="cart-logo" />
             </div>
         );
     }

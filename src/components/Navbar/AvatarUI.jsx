@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
-import { Avatar } from '@material-ui/core';
-import './AvatarUI.css';
+import './Navbar.css';
 
 class AvatarUI extends Component {
     render () {
         return (
-            <div className="profile-container">
-                <Avatar 
-                    src='/images/image-avatar.png'
-                    alt='Profile'
-                    className='avatar'
-                />
+            <div className="profile-section">
+                <img src="images/image-avatar.png" alt="profile-logo" />
             </div>
-        );
+        )
     }
 }
 

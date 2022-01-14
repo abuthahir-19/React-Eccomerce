@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './Mainpage.css';
-// import ImgComp from './ImgComp';
+import ImgComp from './ImgComp';
+import ContentComp from './ContentComp';
 
 class Mainpage extends Component {
     render () {
         return (
-            <div className="main-page-container">
-                {/* <ImgComp /> */}
-            </div>
+            <section className="main-content wraper">
+                <ImgComp />
+                <ContentComp />
+            </section>
         );
     }
 }
