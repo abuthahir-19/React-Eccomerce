@@ -35,6 +35,7 @@ div.cart-list {
 div.cart-list > h3 {
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(228, 228, 228);
+    height: 20%;
 }
 
 div.cart-box {

@@ -2,19 +2,19 @@ import React, { createContext, useContext } from 'react';
 import './CartCont.css';
 
 const countContext = createContext();
-const CartCont = ({ quan, clicked }) => {
+const CartCont = ({ onDelete, quan, clicked }) => {
 
     return (
         <countContext.Provider value={quan}>
             <div className='cart-list' id="cart-list" style={{ display : clicked ? 'block' : 'none'}}>
                 <h3>Cart</h3>
-                {quan > 0 ? <Content /> : <EmptyCart />}
+                {quan > 0 ? <Content onDelete={onDelete} /> : <EmptyCart />}
             </div>
         </countContext.Provider>
     );
 }
 
-const Content = () => {
+const Content = ({ onDelete }) => {
     const quan = useContext (countContext);
     return (
         <>
@@ -26,7 +26,7 @@ const Content = () => {
                     <li><p id="number_of_quantity"> {quan}  </p></li>
                     <li><p id="total_price">&nbsp; {` $${quan * 125}`} </p></li>
                 </div>
-                <img id="delete_icon" src="icons/icon-delete.svg" alt="" onClick={() => console.log('items deleted !!')} />
+                <img id="delete_icon" src="icons/icon-delete.svg" alt="" onClick={onDelete} />
                 <p id="item-count"></p>
                 <p id="empty"></p>
             </div>

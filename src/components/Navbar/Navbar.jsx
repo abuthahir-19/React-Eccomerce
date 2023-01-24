@@ -5,7 +5,7 @@ import CartCont from '../Mainpage/CartCont';
 import CartIcon from './CartIcon';
 import './Navbar.css';
 
-const Navbar = ({ final }) => {
+const Navbar = ({ onDelete, final }) => {
     const [clicked, setClicked] = useState (false);
     const [menuShow, setMenuShow] = useState (false);
     
@@ -35,7 +35,7 @@ const Navbar = ({ final }) => {
                     <AvatarUI />
                 </div>
             </header>
-            <CartCont quan={final} clicked={clicked} />
+            <CartCont onDelete={onDelete} quan={final} clicked={clicked} />
         </div>
     )
 }

@@ -22,9 +22,13 @@ const App = () => {
         setFinal (() => count);
     }
 
+    const onDeleteItem = () => {
+        setFinal (0);
+        setCount (0);
+    }
     return (
         <div className="App">
-            <Navbar final={final} />
+            <Navbar onDelete={onDeleteItem} final={final} />
             <Mainpage addToCart={onAddToCart}  currCount={count} handleIncrement={handleInc} handleDecrement={handleDec} />
         </div>
     );
