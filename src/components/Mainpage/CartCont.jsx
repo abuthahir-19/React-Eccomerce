@@ -37,7 +37,7 @@ const Content = ({ onDelete }) => {
 
 const EmptyCart = () => {
     return (
-        <div id="cart-box" className="cart-box">
+        <div id="cart-box" className="cart-box" style={{height : '60%'}}>
             <p id="empty">Your cart is Empty</p>
         </div>
     );
