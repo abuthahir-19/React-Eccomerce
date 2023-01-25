@@ -9,6 +9,7 @@ const Mainpage = ({ addToCart, currCount, handleIncrement, handleDecrement }) =>
     const [imgClicked, setImgClicked] = useState (false);
 
     const handleImageClick = () => {
+        if (window.innerWidth > 1000)
         setImgClicked (prevState => !prevState);
     }
 

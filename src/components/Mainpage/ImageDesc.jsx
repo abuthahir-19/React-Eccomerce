@@ -12,14 +12,14 @@ const ImageDesc = ({ clicked, clickClose }) => {
                 <img id="close-icon-detail-image" src="icons/icon-close-orange.svg" alt="" onClick={clickClose} />
                 <div id="big-image" className="big-image">
                     <div className="swipe-icon prev_div" onClick={async () => {
-                        if (count > 0) setCount (count - 1);
-                        else setCount (3);
+                        if (count > 0) await setCount (count - 1);
+                        else await setCount (3);
                         await setImage (imagesArray[count]);
                     }}>
                         <img id="previous_icon" src="icons/icon-previous.svg" alt="previous_icon" />
                     </div>
                     <img id="main_image" src={image} alt="main_image" />
-                    <div className="swipe-icon next_div" onClick={async () => {setCount ((count + 1) % 4); await setImage (imagesArray[count])}}>
+                    <div className="swipe-icon next_div" onClick={async () => {await setCount ((count + 1) % 4); await setImage (imagesArray[count])}}>
                         <img id="next_icon" src="icons/icon-next.svg" alt="next_icon" />
                     </div>
                 </div>

@@ -12,6 +12,10 @@ div.image-section {
     padding: 25px;
 }
 
+.swipe-icon.main_page_image {
+    display: none;
+}
+
 div.image-section > .main-image{ 
     width: 65%;
     /* margin-left: 9em; */
@@ -300,6 +304,12 @@ div.sublist-images img::after {
         padding: 0;
     }
 
+    .swipe-icon.main_page_image {
+        display: flex;
+        position: absolute;
+        top: 33%;
+    }
+
     div.image-section > .main-image {
         width: 100%;
     }
@@ -357,6 +367,7 @@ div.sublist-images img::after {
         right: 9px;
         background-color: #fff;
         border-radius: 10px;
+        z-index: 100;
         box-shadow: 1px 4px 18px #888888;
     }
 
