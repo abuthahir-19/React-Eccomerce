@@ -21,7 +21,7 @@ const Content = ({ onDelete }) => {
             <div id="cart-box" className="cart-box">
                 <img id="product_photo" src="images/image-product-1-thumbnail.jpg" alt="img" />
                 <div id="item-details" className="item-details">
-                    <li><p id="cart-info">Fall Limited Edition Sneakers</p></li>
+                    <li><p id="cart-info">Fall Limited Edition Sneakers</p></li><br />
                     <li><p>$125.00 x </p></li>
                     <li><p id="number_of_quantity"> {quan}  </p></li>
                     <li><p id="total_price">&nbsp; {` $${quan * 125}`} </p></li>
