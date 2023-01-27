@@ -44,6 +44,10 @@ div.cart-box {
     left: 0;
 }
 
+div.cart-box.empty {
+    height: 100%;
+}
+
 div.item-details {
     padding: 10px;
     width: 78%;
@@ -108,6 +112,10 @@ div.cart-list > button {
 
     div.cart-box {
         top: 5px;
+    }
+
+    div.cart-box.empty {
+        height: 60%;
     }
 
     div.cart-list > button {
