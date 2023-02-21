@@ -1,3 +1,6 @@
+# UI Design source inferred from frontendmentor.io
+![Design preview for Ecommerce product page](./design/desktop-design.jpg)
+
 # Start Accessing the application
 To acces the application go to [React Ecommerce App](https://react-ecommerce-3f499.web.app/)
 
